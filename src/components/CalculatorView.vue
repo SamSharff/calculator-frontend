@@ -2,8 +2,8 @@
   <div class="calculator">
     <!-- <h1>{{ msg }}</h1> -->
     <div class="basic-calculator">
-      <div @click="clear" class="display">{{ number || 0 }}</div>
-      <div class="btn clear">C</div>
+      <div class="display">{{ number || 0 }}</div>
+      <div @click="clear" class="btn clear">C</div>
       <div class="btn remove">Del</div>
       <div class="btn">9</div>
       <div class="btn">8</div>
@@ -16,8 +16,8 @@
       <div class="btn">1</div>
       <div class="btn">0</div>
       <div class="btn">.</div>
-      <div class="btn operator">=</div>
       <div class="btn operator">/</div>
+      <div class="btn operator">=</div>
       <div class="btn operator">-</div>
       <div class="btn operator">+</div>
       <div class="btn operator">x</div>
@@ -29,8 +29,13 @@
 export default {
   data: function () {
     return {
-      number: "",
+      number: 12,
     };
+  },
+  methods: {
+    clear() {
+      this.number = "";
+    },
   },
 };
 </script>
