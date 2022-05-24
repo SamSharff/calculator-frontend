@@ -4,7 +4,7 @@
     <div class="basic-calculator">
       <div class="display">{{ number || 0 }}</div>
       <div @click="clear" class="btn clear">C</div>
-      <div class="btn remove">Del</div>
+      <div @click="remove" class="btn remove">Del</div>
       <div @click="append(7)" class="btn">7</div>
       <div @click="append(8)" class="btn">8</div>
       <div @click="append(9)" class="btn">9</div>
@@ -39,6 +39,9 @@ export default {
     },
     append(num) {
       this.number = `${this.number}${num}`;
+    },
+    remove() {
+      this.number = this.number.slice(0, -1);
     },
   },
 };
