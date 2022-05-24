@@ -20,8 +20,8 @@
       <div class="btn operator">-</div>
       <div @click="append(0)" class="btn">0</div>
       <div class="btn">.</div>
-      <div class="btn equal">=</div>
-      <div class="btn operator">+</div>
+      <div @click="equal" class="btn equal">=</div>
+      <div @click="addition" class="btn operator">+</div>
     </div>
   </div>
 </template>
@@ -30,7 +30,10 @@
 export default {
   data: function () {
     return {
-      number: 12,
+      prevNum: null,
+      number: "",
+      operator: null,
+      clickedOperator: false,
     };
   },
   methods: {
@@ -38,10 +41,25 @@ export default {
       this.number = "";
     },
     append(num) {
+      if (this.clickedOperator) {
+        (this.number = ""), (this.clickedOperator = false);
+      }
       this.number = `${this.number}${num}`;
     },
     remove() {
       this.number = this.number.slice(0, -1);
+    },
+    setPrevNum() {
+      this.prevNum = this.number;
+      this.clickedOperator = true;
+    },
+    addition() {
+      this.operator = (a, b) => a + b;
+      this.setPrevNum();
+    },
+    equal() {
+      this.number = `${this.operator(parseFloat(this.prevNum), parseFloat(this.number))}`;
+      this.prevNum = "";
     },
   },
 };
