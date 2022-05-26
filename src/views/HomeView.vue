@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="home">
     <Calculator msg="Calculator" />
   </div>
@@ -14,4 +14,4 @@ export default {
     Calculator,
   },
 };
-</script>
+</script> -->

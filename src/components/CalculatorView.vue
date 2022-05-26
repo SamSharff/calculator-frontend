@@ -3,25 +3,25 @@
     <!-- <h1>{{ msg }}</h1> -->
     <div class="basic-calculator">
       <div class="display">{{ number || 0 }}</div>
-      <div @click="clear" class="btn clear">C</div>
-      <div @click="remove" class="btn remove">Del</div>
-      <div @click="append(7)" class="btn">7</div>
-      <div @click="append(8)" class="btn">8</div>
-      <div @click="append(9)" class="btn">9</div>
+      <div @click="clear" class="btn clear hover-class">C</div>
+      <div @click="remove" class="btn remove hover-class">Del</div>
+      <div @click="append(7)" class="btn hover-class">7</div>
+      <div @click="append(8)" class="btn hover-class">8</div>
+      <div @click="append(9)" class="btn hover-class">9</div>
 
-      <div @click="division" class="btn operator">/</div>
-      <div @click="append(4)" class="btn">4</div>
-      <div @click="append(5)" class="btn">5</div>
-      <div @click="append(6)" class="btn">6</div>
-      <div @click="multiplication" class="btn operator">x</div>
-      <div @click="append(1)" class="btn">1</div>
-      <div @click="append(2)" class="btn">2</div>
-      <div @click="append(3)" class="btn">3</div>
-      <div @click="subtraction" class="btn operator">-</div>
-      <div @click="append(0)" class="btn">0</div>
-      <div @click="dot" class="btn">.</div>
-      <div @click="equal" class="btn equal">=</div>
-      <div @click="addition" class="btn operator">+</div>
+      <div @click="division" class="btn operator hover-class-operator">/</div>
+      <div @click="append(4)" class="btn hover-class">4</div>
+      <div @click="append(5)" class="btn hover-class">5</div>
+      <div @click="append(6)" class="btn hover-class">6</div>
+      <div @click="multiplication" class="btn operator hover-class-operator">x</div>
+      <div @click="append(1)" class="btn hover-class">1</div>
+      <div @click="append(2)" class="btn hover-class">2</div>
+      <div @click="append(3)" class="btn hover-class">3</div>
+      <div @click="subtraction" class="btn operator hover-class-operator">-</div>
+      <div @click="append(0)" class="btn hover-class">0</div>
+      <div @click="dot" class="btn hover-class">.</div>
+      <div @click="equal" class="btn operator hover-class-operator">=</div>
+      <div @click="addition" class="btn operator hover-class-operator">+</div>
     </div>
   </div>
 </template>
@@ -108,12 +108,19 @@ Add "scoped" attribute to limit CSS to this component only -->
   border: 1px solid rgb(52, 47, 47);
   cursor: pointer;
 }
-.equal {
-  background-color: red;
-  color: white;
+
+.hover-class:hover {
+  cursor: pointer;
+  background: #f7fff9;
 }
+
+.hover-class-operator:hover {
+  cursor: pointer;
+  color: #444 !important;
+}
+
 .operator {
-  background-color: rgb(49, 120, 148);
+  background-color: #a1aba4;
   color: #fff;
 }
 </style>
