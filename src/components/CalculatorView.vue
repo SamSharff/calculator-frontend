@@ -83,7 +83,12 @@ export default {
 </script>
 
 Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, rgb(255, 255, 241), #a1aba4);
+}
 .basic-calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -95,7 +100,7 @@ Add "scoped" attribute to limit CSS to this component only -->
 .display {
   grid-column: 1/5;
   background-color: #444 !important;
-  color: #fff;
+  color: rgb(255, 255, 241);
 }
 .clear {
   grid-column: 1/3;
@@ -111,7 +116,7 @@ Add "scoped" attribute to limit CSS to this component only -->
 
 .hover-class:hover {
   cursor: pointer;
-  background: #f7fff9;
+  background: rgb(255, 255, 241);
 }
 
 .hover-class-operator:hover {
@@ -121,6 +126,6 @@ Add "scoped" attribute to limit CSS to this component only -->
 
 .operator {
   background-color: #a1aba4;
-  color: #fff;
+  color: rgb(255, 255, 241);
 }
 </style>
