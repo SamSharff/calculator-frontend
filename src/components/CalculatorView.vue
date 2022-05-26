@@ -19,7 +19,7 @@
       <div @click="append(3)" class="btn">3</div>
       <div @click="subtraction" class="btn operator">-</div>
       <div @click="append(0)" class="btn">0</div>
-      <div class="btn">.</div>
+      <div @click="dot" class="btn">.</div>
       <div @click="equal" class="btn equal">=</div>
       <div @click="addition" class="btn operator">+</div>
     </div>
@@ -45,6 +45,11 @@ export default {
         (this.number = ""), (this.clickedOperator = false);
       }
       this.number = `${this.number}${num}`;
+    },
+    dot() {
+      if (this.number.indexOf(".") === -1) {
+        this.append(".");
+      }
     },
     remove() {
       this.number = this.number.slice(0, -1);
