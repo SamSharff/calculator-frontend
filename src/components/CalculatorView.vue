@@ -77,6 +77,9 @@ export default {
     equal() {
       this.number = `${this.operator(parseFloat(this.prevNum), parseFloat(this.number))}`;
       this.prevNum = "";
+      // if (isNaN(number) || isNaN(prevNum)) return;
+      // Working on: getting this function not to run if value is NaN
+      // Working on: getting calculator to handle multiple arguments in format "number + number + number", etc. instead of hvaing to press "=" in between each computation
     },
   },
 };
