@@ -1,31 +1,3 @@
-<template>
-  <div class="calculator">
-    <!-- <h1>{{ msg }}</h1> -->
-    <div class="basic-calculator">
-      <div class="display">{{ number || 0 }}</div>
-      <div @click="clear" class="btn clear hover-class">C</div>
-      <div @click="remove" class="btn remove hover-class">Del</div>
-      <div @click="append(7)" class="btn hover-class">7</div>
-      <div @click="append(8)" class="btn hover-class">8</div>
-      <div @click="append(9)" class="btn hover-class">9</div>
-
-      <div @click="division" class="btn operator hover-class-operator">/</div>
-      <div @click="append(4)" class="btn hover-class">4</div>
-      <div @click="append(5)" class="btn hover-class">5</div>
-      <div @click="append(6)" class="btn hover-class">6</div>
-      <div @click="multiplication" class="btn operator hover-class-operator">x</div>
-      <div @click="append(1)" class="btn hover-class">1</div>
-      <div @click="append(2)" class="btn hover-class">2</div>
-      <div @click="append(3)" class="btn hover-class">3</div>
-      <div @click="subtraction" class="btn operator hover-class-operator">-</div>
-      <div @click="append(0)" class="btn hover-class">0</div>
-      <div @click="dot" class="btn hover-class">.</div>
-      <div @click="equal" class="btn operator hover-class-operator">=</div>
-      <div @click="addition" class="btn operator hover-class-operator">+</div>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   data: function () {
@@ -85,7 +57,34 @@ export default {
 };
 </script>
 
-Add "scoped" attribute to limit CSS to this component only -->
+<template>
+  <div class="calculator">
+    <!-- <h1>{{ msg }}</h1> -->
+    <div class="basic-calculator">
+      <div class="display">{{ number || 0 }}</div>
+      <div @click="clear" class="btn clear hover-class">C</div>
+      <div @click="remove" class="btn remove hover-class">Del</div>
+      <div @click="append(7)" class="btn hover-class">7</div>
+      <div @click="append(8)" class="btn hover-class">8</div>
+      <div @click="append(9)" class="btn hover-class">9</div>
+
+      <div @click="division" class="btn operator hover-class-operator">/</div>
+      <div @click="append(4)" class="btn hover-class">4</div>
+      <div @click="append(5)" class="btn hover-class">5</div>
+      <div @click="append(6)" class="btn hover-class">6</div>
+      <div @click="multiplication" class="btn operator hover-class-operator">x</div>
+      <div @click="append(1)" class="btn hover-class">1</div>
+      <div @click="append(2)" class="btn hover-class">2</div>
+      <div @click="append(3)" class="btn hover-class">3</div>
+      <div @click="subtraction" class="btn operator hover-class-operator">-</div>
+      <div @click="append(0)" class="btn hover-class">0</div>
+      <div @click="dot" class="btn hover-class">.</div>
+      <div @click="equal" class="btn operator hover-class-operator">=</div>
+      <div @click="addition" class="btn operator hover-class-operator">+</div>
+    </div>
+  </div>
+</template>
+
 <style>
 body {
   padding: 0;
