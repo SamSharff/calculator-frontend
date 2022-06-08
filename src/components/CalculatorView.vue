@@ -1,4 +1,6 @@
 <script>
+// import axios from "axios";
+
 export default {
   data: function () {
     return {
@@ -6,6 +8,7 @@ export default {
       number: "",
       operator: null,
       clickedOperator: false,
+      msg: "Calculator!!!",
     };
   },
   methods: {
@@ -59,7 +62,7 @@ export default {
 
 <template>
   <div class="calculator">
-    <!-- <h1>{{ msg }}</h1> -->
+    <h1>{{ msg }}</h1>
     <div class="basic-calculator">
       <div class="display">{{ number || 0 }}</div>
       <div @click="clear" class="btn clear hover-class">C</div>
